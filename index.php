@@ -1,2 +1,2 @@
 <?php
-require "CRUD/Read.php";
+require "Controllers/readController.php";

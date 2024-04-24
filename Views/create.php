@@ -1,6 +1,5 @@
 <?php
 require "Config/Database.php";
-
 if(isset($_POST["submit"]))
 {
     $title = $_POST["todoTitle"];
@@ -14,7 +13,7 @@ if(isset($_POST["submit"]))
 }
 ?>
 <h1>Todo List</h1>
-    <form action="create.php" method="POST">
+    <form action="CRUD/create.php" method="POST">
     <P>Todo List</P>
     <input type="text" name="todoTitle">
     <P>Todo Description</P>
