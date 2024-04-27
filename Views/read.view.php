@@ -1,11 +1,4 @@
-<!-- <p><a href="Controllers/createController.php">NEW NOTE</a></p>
-<?php foreach($notes as $note):?>
-            <li>
-                <a href="../Controllers/detailController.php?id=<?php echo $note['id']; ?>"><?php echo $note["todoTitle"];?></a>- <?php echo  $note["date"];; ?>
-            </li>
-            <button type="button"><a href="/Controllers/editController.php?id=<?php echo $note["id"];?>">Edit</a></button>
-            <button type="button"><a href="/Controllers/deleteController.php?id=<?php echo $note["id"];?>">Delete</a></button>
-<?php endforeach;?> -->
+<p><a href="Controllers/createController.php">NEW NOTE</a></p>
 <body>
         <!-- Navigation-->
         <!-- Page Header-->
@@ -27,10 +20,17 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="/post.php">
+                        <!-- <a href="/post.php">
                             <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
                             <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
-                        </a>
+                        </a> -->
+<?php foreach($notes as $note):?>
+            <h2>
+                <a href="../Controllers/detailController.php?id=<?php echo $note['id']; ?>"><?php echo $note["todoTitle"];?></a>- <?php echo  $note["date"];; ?>
+</h2>
+            <button type="button"><a href="/Controllers/editController.php?id=<?php echo $note["id"];?>">Edit</a></button>
+            <button type="button"><a href="/Controllers/deleteController.php?id=<?php echo $note["id"];?>">Delete</a></button>
+<?php endforeach;?>
                         <p class="post-meta">
                             Posted by
                             <a href="#!">Start Bootstrap</a>
@@ -42,7 +42,6 @@
                     <!-- Divider-->
                     <hr class="my-4" />
                     <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
                 </div>
             </div>
         </div>
